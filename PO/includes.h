@@ -4,6 +4,7 @@
 
 #include "LesClasses.h"
 #include <iostream>
-#include <iterator>
+#include <iterator> // Textes simplifié
+#include <string> // Obligatoire pour pouvoir utiliser les objets string
 
 #endif

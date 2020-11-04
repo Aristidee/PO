@@ -15,4 +15,5 @@ public :
 	int getN2(void);
 	int setN1(int);
 	int setN2(int);
+	int CLa(void);
 };

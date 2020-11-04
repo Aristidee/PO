@@ -9,11 +9,11 @@ int main()
 	//Déclaration initiale
 	int pause;
 	ostream_iterator<string> str(cout, "\n");
-	ostream_iterator<double> num(cout, "\n");
+	ostream_iterator<double> dou(cout, "\n");
 
 	double abc = 2.56876527512397152379123745317642375612375213752146712345;
 	*str = "Hello World !";		// Écriture texte
-	*num = abc;				// Écriture nombre
+	*dou = abc;				// Écriture nombre
 
 	cin >> pause;
 }
