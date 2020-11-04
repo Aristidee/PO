@@ -12,7 +12,7 @@ Calcules::Calcules(void)
     this->ini_obj(0, 0);
 }
 
-Calcules::Calcules(int n1, int n1)
+Calcules::Calcules(int n1, int n2)
 {
     this->ini_obj(n1, n2);
 }
@@ -44,6 +44,7 @@ int Calcules::setN1(int n1)
     else {
         this->n1 = 0;
     }
+    return n1;
 }
 
 int Calcules::setN2(int n2)
@@ -54,4 +55,5 @@ int Calcules::setN2(int n2)
     else {
         this->n2 = 0;
     }
+    return n2;
 }
