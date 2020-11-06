@@ -1,42 +1,26 @@
 // Déclaration des dépendances externes
 #include "includes.h"
 
-//using namespace System;
-using namespace std; // std::cout
 
 int main()
 {
 	//Déclaration initiale
-	int pause;
-	ostream_iterator<string> str(cout, "\n");
-	ostream_iterator<double> dou(cout, "\n");
+	ostream_iterator<string> str(cout, "\n"); // *str = string;
+	ostream_iterator<double> dou(cout, "\n"); // *dou = nombre;
+	// ----------------------------------
 
-	double abc = 2.56876527512397152379123745317642375612375213752146712345;
-	*str = "Hello World !";		// Écriture texte
-	*dou = abc;				// Écriture nombre
+        Personnage david("David"), goliath("Goliath", "The Boss Weapon", 20);
+        //Personnage david("Per1"), goliath("Per2");
+        //Création de 2 objets de type Personnage : david et goliath
 
-	cin >> pause;
+        goliath.attaquer(david); //goliath attaque david
+        david.boirePotionDeVie(20); //david récupère 20 de vie en buvant une potion
+        goliath.attaquer(david); //goliath réattaque david
+        david.attaquer(goliath); //david contre-attaque... c'est assez clair non ? 
+        goliath.changerArme("Double hache tranchante veneneuse de la mort", 40);
+        goliath.attaquer(david);
+ 
+
+	// ----------------------------------
+    system("pause");
 }
-
-
-/*
-void main(void) {
-	Calcules obj1;
-	Calcules* obj2;
-
-	int r;
-	int r1;
-
-	r = obj1.m_add(1, 2);
-	r1 = obj1.m_sous(10, 10);
-	cout << "Le resultat r : " << r << endl;
-	cout << "Le resultat r2 : " << r1 << endl;
-
-	obj2 = new Calcules();
-	cout << "Le resultat obj2 : " << obj2->m_add(20, 30) << endl;
-
-	delete obj2;
-
-	system("PAUSE");
-}
-*/

@@ -1,95 +1,51 @@
 #include "includes.h"
 #include "LesClasses.h"
 
-class Personnage
+Personnage::Personnage(string nom) : m_nom(nom), m_vie(100), m_mana(100), m_nomArme("Épée rouillée"), m_degatsArme(10)
 {
-    // Méthodes
-    void recevoirDegats(int nbDegats)
-    {
-
-    }
-
-    void attaquer(Personnage& cible)
-    {
-
-    }
-
-    void boirePotionDeVie(int quantitePotion)
-    {
-
-    }
-
-    void changerArme(string nomNouvelleArme, int degatsNouvelleArme)
-    {
-
-    }
-
-    bool estVivant()
-    {
-
-    }
-
-    // Attributs
-    int m_vie;
-    int m_mana;
-    string m_nomArme;
-    int m_degatsArme;
-};
-
-
-void Calcules::ini_obj(int n1, int n2)
-{
-    this->setN1(n1);
-    this->setN2(n2);
+	//Rien à mettre dans le corps du constructeur, tout a déjà été fait !
 }
 
-Calcules::Calcules(void)
+Personnage::Personnage(string nom, string nomArme, int degatsArme) : m_nom(nom), m_vie(100), m_mana(100), m_nomArme(nomArme), m_degatsArme(degatsArme)
 {
-    this->ini_obj(0, 0);
 }
 
-Calcules::Calcules(int n1, int n2)
+
+void Personnage::recevoirDegats(int nbDegats)
 {
-    this->ini_obj(n1, n2);
+	m_vie -= nbDegats;
+	if (m_vie < 0) {
+		m_vie = 0;
+	}
+	cout << m_nom << " a recu " << nbDegats << " degats." << endl;
+	Sleep(100);
 }
 
-int Calcules::m_add(int n1, int n2)
+void Personnage::attaquer(Personnage& cible)
 {
-    return n1 + n2;
+	cout << m_nom << " attaque " << cible.m_nom << " en faisant " << m_degatsArme << " degats.   -->   ";
+	Sleep(100);
+	cible.recevoirDegats(m_degatsArme);
 }
 
-int Calcules::m_sous(int n1, int n2)
+void Personnage::boirePotionDeVie(int quantitePotion)
 {
-    return n1 - n2;
+	m_vie += quantitePotion;
+	if (m_vie > 100) {
+		m_vie = 100;
+	}
+	cout << m_nom << (" boit ") << quantitePotion << (" de potion et a une vie de ") << m_vie << (".") << endl;
+	Sleep(100);
 }
 
-int Calcules::getN1(void)
+void Personnage::changerArme(std::string nomNouvelleArme, int degatsNouvelleArme)
 {
-    return this->n1;
-}
-int Calcules::getN2(void)
-{
-    return this->n2;
+	m_nomArme = nomNouvelleArme;
+	m_degatsArme = degatsNouvelleArme;
+	cout << m_nom << (" change d'arme ") << m_nomArme << ("(") << m_degatsArme << (") degats.") << endl;
 }
 
-int Calcules::setN1(int n1)
+bool Personnage::estVivant()
 {
-    if (n1 > 0) {
-        this->n1 = n1;
-    }
-    else {
-        this->n1 = 0;
-    }
-    return n1;
-}
-
-int Calcules::setN2(int n2)
-{
-    if (n2 > 0) {
-        this->n2 = n2;
-    }
-    else {
-        this->n2 = 0;
-    }
-    return n2;
+	return m_vie > 0;
 }
