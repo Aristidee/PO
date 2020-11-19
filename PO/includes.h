@@ -8,7 +8,6 @@
 #include <fstream>
 
 #include "Arme.h"
-#include "Personnage.h"
 
 using namespace std; // std::cout
 
