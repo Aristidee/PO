@@ -8,6 +8,7 @@
 #include <fstream>
 
 #include "Arme.h" //Salut github
+//C'est Thomas
 
 using namespace std; // std::cout
 
