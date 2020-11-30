@@ -27,6 +27,3 @@ int main()
 	// ----------------------------------
     system("pause");
 }
-//Aristideeeeeeeeeeeeeeee
-
-//math
