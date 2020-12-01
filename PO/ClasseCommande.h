@@ -5,8 +5,8 @@ class ClasseCommande
 {
 private :
 	int	ID; //incrementer par la requete sql
-	struct SDATE dateEmission;
-	struct SDATE dateLivraison;
+	struct struct_date dateEmission;
+	struct struct_date dateLivraison;
 	float remise; // a calculer via IDclient
 	float totalTTC;
 	int IDclient;

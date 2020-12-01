@@ -36,7 +36,7 @@
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Statistiques.h">
+    <ClInclude Include="ClassePersonnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -57,9 +57,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MyForm.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Statistiques.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
