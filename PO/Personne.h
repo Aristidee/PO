@@ -10,7 +10,7 @@ public:
 	~Personne();
 	void setNom(string nvnom) { Nom = nvnom; }
 	void setPrenom(string nvprenom) { Prenom = nvprenom; }
-	void setDate_de_naissance(int nvanne, int nvmois, int nvjour);
+	void setDate_de_naissance(int nbannee, int nbmois, int nbjour);
 	string getPrenom() { return Prenom; }
 	string getNom() { return Nom; }
 
@@ -18,5 +18,7 @@ public:
 private:
 	string Nom;
 	string Prenom;
-	int age;
+	int nbannee;
+	int nbmois;
+	int jour;
 };
