@@ -5,7 +5,7 @@ struct struct_date {
 	int jour;
 	int mois;
 	int annee;
-}SDATE;
+};
 
 struct ADRESSE
 {
