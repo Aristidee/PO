@@ -6,12 +6,17 @@ class Stock
 public:
 	Stock(); //ajout d'un nouveau produit au stock
 	~Stock(); //suppression d'un produit du stock
-	void ModifierProduit();
-	void AfficherProduit();
+	int getID();
+	string getNom();
+	void setNom(string);
+	int getQuantite();
+	void setQuantite(int);
+	int getPrix();
+	void setPrix(int);
 
 private:
 	int IDproduit;
-	std::string NomProduit;
-	int quantité;
-	int PrixUnitaire;
+	std::string nomProduit;
+	int quantite;
+	int prixUnitaire;
 };

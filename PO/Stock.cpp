@@ -11,12 +11,37 @@ Stock::~Stock()
 
 }
 
-void Stock::ModifierProduit()
+int Stock::getID()
 {
-
+    return IDproduit;
 }
 
-void Stock::AfficherProduit()
+string Stock::getNom()
 {
+    return nomProduit;
+}
 
+void Stock::setNom(string nom)
+{
+    nomProduit = nom;
+}
+
+int Stock::getQuantite()
+{
+    return quantite;
+}
+
+void Stock::setQuantite(int n)
+{
+    quantite += n;
+}
+
+int Stock::getPrix()
+{
+    return prixUnitaire;
+}
+
+void Stock::setPrix(int nvprix)
+{
+    prixUnitaire = nvprix;
 }
