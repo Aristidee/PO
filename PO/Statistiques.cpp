@@ -5,7 +5,7 @@ void Statistiques::PanierMoyen() {
 
 }
 
-void Statistiques::ChiffreAffaireMois() {
+void Statistiques::ChiffreAffaireMois(int Somme, string mois) {
 
 }
 

@@ -5,7 +5,7 @@ class Statistiques
 {
 public:
 	void PanierMoyen();
-	void ChiffreAffaireMois();
+	void ChiffreAffaireMois(int Somme, string mois);
 	void SeuilRepproProduit();
 	void TotalAchatClient();
 	void MeilleuresVentes();
