@@ -9,14 +9,16 @@ class Personne
 public:
 	Personne(); 
 	~Personne();
-	void setNom(string nvnom) { Nom = nvnom; }
-	void setPrenom(string nvprenom) { Prenom = nvprenom; }
-	void setDate_de_naissance(int nbannee, int nbmois, int nbjour);
-	string getPrenom() { return Prenom; }
-	string getNom() { return Nom; }
+	void setNom(string nvnom);
+	void setPrenom(string nvprenom);
+	void setDate(int nbannee, int nbmois, int nbjour);
+	string getPrenom();
+	string getNom();
+	int getID();
 	virtual void modifier() = 0;
 
 private:
+	int ID;
 	string Nom;
 	string Prenom;
 	int age;
