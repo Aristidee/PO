@@ -10,5 +10,5 @@ public:
 private:
 	std::string Nom;
 	std::string Prenom;
-	int age;
+	struct DateNaissance;
 };
