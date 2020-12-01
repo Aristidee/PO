@@ -1,5 +1,6 @@
 #pragma once
 #include "includes.h"
+#include "Structures.h"
 
 class Client : private Personne
 {
@@ -11,20 +12,7 @@ public:
 
 private:
 	int IDClient;
-	struct AdresseFacturation
-	{
-		string Numero;
-		string rue;
-		string ville;
-		string codePostal;
-	};
-	struct AdresseLivraison
-	{
-		string Numero;
-		string rue;
-		string ville;
-		string codePostal;
-	};
+	struct ADRESSE adresse;
 	int NombreAchat;
 
 };

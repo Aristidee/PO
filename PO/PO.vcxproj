@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClasseCommande.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="Stock.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClasseCommande.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="Personne.h" />

@@ -19,3 +19,12 @@ struct ADRESSE
 
 	ADRESSE* suivante;
 }ADRESSE;
+
+struct PANIER 
+{
+	int referenceArticle;
+	int IDcommande;
+	int quantite;
+
+	PANIER* suivant;
+}PANIER;
