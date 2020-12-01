@@ -1,12 +1,11 @@
 #pragma once
 #include <string>
 
-struct DATE
-{
-	int Jour;
-	int Mois;
-	int Annee;
-}DATE;
+struct struct_date {
+	int jour;
+	int mois;
+	int annee;
+}SDATE;
 
 struct ADRESSE
 {
