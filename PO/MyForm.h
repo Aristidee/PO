@@ -110,6 +110,7 @@ namespace PO {
 	private: System::Windows::Forms::Label^ label27;
 	private: System::Windows::Forms::TextBox^ textBox27;
 	private: System::Windows::Forms::Label^ label28;
+	private: System::Windows::Forms::Button^ button13;
 
 	private:
 		/// <summary>
@@ -197,6 +198,7 @@ namespace PO {
 			this->label27 = (gcnew System::Windows::Forms::Label());
 			this->textBox27 = (gcnew System::Windows::Forms::TextBox());
 			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->button13 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
@@ -782,7 +784,7 @@ namespace PO {
 			// 
 			// textBox26
 			// 
-			this->textBox26->Location = System::Drawing::Point(1098, 467);
+			this->textBox26->Location = System::Drawing::Point(1121, 464);
 			this->textBox26->Name = L"textBox26";
 			this->textBox26->Size = System::Drawing::Size(88, 20);
 			this->textBox26->TabIndex = 75;
@@ -790,7 +792,7 @@ namespace PO {
 			// label27
 			// 
 			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(1095, 490);
+			this->label27->Location = System::Drawing::Point(1118, 487);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(44, 13);
 			this->label27->TabIndex = 76;
@@ -798,7 +800,7 @@ namespace PO {
 			// 
 			// textBox27
 			// 
-			this->textBox27->Location = System::Drawing::Point(1192, 467);
+			this->textBox27->Location = System::Drawing::Point(1215, 464);
 			this->textBox27->Name = L"textBox27";
 			this->textBox27->Size = System::Drawing::Size(88, 20);
 			this->textBox27->TabIndex = 77;
@@ -806,17 +808,27 @@ namespace PO {
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(1194, 490);
+			this->label28->Location = System::Drawing::Point(1217, 487);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(47, 13);
 			this->label28->TabIndex = 78;
 			this->label28->Text = L"Quantité";
 			// 
+			// button13
+			// 
+			this->button13->Location = System::Drawing::Point(1309, 462);
+			this->button13->Name = L"button13";
+			this->button13->Size = System::Drawing::Size(75, 23);
+			this->button13->TabIndex = 79;
+			this->button13->Text = L"Ajouter";
+			this->button13->UseVisualStyleBackColor = true;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1382, 517);
+			this->ClientSize = System::Drawing::Size(1399, 517);
+			this->Controls->Add(this->button13);
 			this->Controls->Add(this->label28);
 			this->Controls->Add(this->textBox27);
 			this->Controls->Add(this->label27);
