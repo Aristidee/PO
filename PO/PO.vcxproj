@@ -145,6 +145,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personne.cpp" />
+    <ClCompile Include="Statistiques.cpp" />
     <ClCompile Include="Stock.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +156,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Personne.h" />
+    <ClInclude Include="Statistiques.h" />
     <ClInclude Include="Stock.h" />
     <ClInclude Include="Structures.h" />
   </ItemGroup>
