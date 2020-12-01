@@ -18,7 +18,7 @@ public:
 private:
 	string Nom;
 	string Prenom;
-	int nbanne;
+	int nbannee;
 	int nbmois;
 	int jour;
 };
