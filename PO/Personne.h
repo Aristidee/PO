@@ -14,7 +14,6 @@ public:
 	string getPrenom() { return Prenom; }
 	string getNom() { return Nom; }
 
-	~Personne(); 
 	virtual void modifier() = 0;
 private:
 	string Nom;
