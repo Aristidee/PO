@@ -141,20 +141,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClasseCommande.cpp" />
+    <ClCompile Include="ClassePersonnel.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personne.cpp" />
+    <ClCompile Include="Statistiques.cpp" />
     <ClCompile Include="Stock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClasseCommande.h" />
+    <ClInclude Include="ClassePersonnel.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Personne.h" />
+    <ClInclude Include="Statistiques.h" />
     <ClInclude Include="Stock.h" />
     <ClInclude Include="Structures.h" />
   </ItemGroup>
