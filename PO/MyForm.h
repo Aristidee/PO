@@ -210,6 +210,7 @@ namespace PO {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(130, 20);
 			this->textBox1->TabIndex = 0;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -295,6 +296,7 @@ namespace PO {
 			this->label3->Size = System::Drawing::Size(29, 13);
 			this->label3->TabIndex = 11;
 			this->label3->Text = L"Nom";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
 			// label4
 			// 
@@ -332,6 +334,7 @@ namespace PO {
 			this->label8->Size = System::Drawing::Size(63, 13);
 			this->label8->TabIndex = 16;
 			this->label8->Text = L"Code postal";
+			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
 			// 
 			// label9
 			// 
@@ -398,6 +401,7 @@ namespace PO {
 			this->button2->TabIndex = 24;
 			this->button2->Text = L"Ajouter";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// button3
 			// 
@@ -407,6 +411,7 @@ namespace PO {
 			this->button3->TabIndex = 25;
 			this->button3->Text = L"Modifier";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// button4
 			// 
@@ -416,6 +421,7 @@ namespace PO {
 			this->button4->TabIndex = 26;
 			this->button4->Text = L"Supprimer";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// dataGridView1
 			// 
@@ -603,6 +609,7 @@ namespace PO {
 			this->label19->Size = System::Drawing::Size(101, 13);
 			this->label19->TabIndex = 57;
 			this->label19->Text = L"Date livraison prévu";
+			this->label19->Click += gcnew System::EventHandler(this, &MyForm::label19_Click);
 			// 
 			// label20
 			// 
@@ -703,6 +710,7 @@ namespace PO {
 			this->label22->Size = System::Drawing::Size(63, 13);
 			this->label22->TabIndex = 67;
 			this->label22->Text = L"Code postal";
+			this->label22->Click += gcnew System::EventHandler(this, &MyForm::label22_Click);
 			// 
 			// label23
 			// 
@@ -712,6 +720,7 @@ namespace PO {
 			this->label23->Size = System::Drawing::Size(65, 13);
 			this->label23->TabIndex = 66;
 			this->label23->Text = L"Nom de ville";
+			this->label23->Click += gcnew System::EventHandler(this, &MyForm::label23_Click);
 			// 
 			// label24
 			// 
@@ -721,6 +730,7 @@ namespace PO {
 			this->label24->Size = System::Drawing::Size(112, 13);
 			this->label24->TabIndex = 65;
 			this->label24->Text = L"Numéro et nom de rue";
+			this->label24->Click += gcnew System::EventHandler(this, &MyForm::label24_Click);
 			// 
 			// textBox21
 			// 
@@ -915,7 +925,37 @@ namespace PO {
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label24_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label23_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label22_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label19_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 }
