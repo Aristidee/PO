@@ -1,26 +1,24 @@
 #pragma once
-#include "includes.h"
 #include "Structures.h"
 
-using namespace std;
 
-class Personne
+ref class Personne
 {
 public:
 	Personne(); 
 	~Personne();
-	void setNom(string nvnom);
-	void setPrenom(string nvprenom);
+	void setNom(System::String nvnom);
+	void setPrenom(System::String nvprenom);
 	void setDate(int nbannee, int nbmois, int nbjour);
-	string getPrenom();
-	string getNom();
+	System::String getPrenom();
+	System::String getNom();
 	int getID();
 	virtual void modifier() = 0;
 
 private:
 	int ID;
-	string Nom;
-	string Prenom;
+	System::String Nom;
+	System::String Prenom;
 	int age;
-	struct struct_date date;
+	struct_date date;
 };

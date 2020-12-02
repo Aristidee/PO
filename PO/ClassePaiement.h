@@ -1,16 +1,16 @@
 #pragma once
 #include "Structures.h"
 
-class ClassePaiement
+ref class ClassePaiement
 {
 private :
 	int ID;
-	struct struct_date dateEnvoi;
-	struct struct_date dateRecu;
-	std::string moyenPaiement;
+	ref struct struct_date dateEnvoi;
+	ref struct struct_date dateRecu;
+	System::String moyenPaiement;
 	float montant;
 	int IDCommande;
-	struct ADRESSE adresseFacturation;
+	ref struct ADRESSE adresseFacturation;
 public :
 	ClassePaiement();
 	~ClassePaiement();
@@ -22,7 +22,7 @@ public :
 	void setMoyen(std::string);
 	int getIDCommande();
 	void setIDCommande(int);
-	struct ADRESSE getAdresse();
+	ADRESSE getAdresse();
 	void setAdresse(int, std::string, std::string, std::string, double);
 
 };

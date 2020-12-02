@@ -1,11 +1,10 @@
 #pragma once
-#include "Includes.h"
 
 class Statistiques
 {
 public:
 	void PanierMoyen();
-	void ChiffreAffaireMois(int Somme, string mois);
+	void ChiffreAffaireMois(int, System::String);
 	void SeuilRepproProduit();
 	void TotalAchatClient();
 	void MeilleuresVentes();

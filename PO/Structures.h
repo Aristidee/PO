@@ -1,29 +1,29 @@
 #pragma once
 #include <string>
 
-struct struct_date {
+ref struct struct_date {
 	int jour;
 	int mois;
 	int annee;
 };
 
-struct ADRESSE
+ref struct ADRESSE
 {
 	int ID;
 	int numero;
-	std::string typeDeVoie;
-	std::string libelleDeVoie;
-	std::string Ville;
+	System::String typeDeVoie;
+	System::String libelleDeVoie;
+	System::String Ville;
 	double codePostal;
 
-	ADRESSE* suivante;
-}ADRESSE;
+	ADRESSE^ suivante;
+};
 
-struct PANIER 
+ref struct PANIER 
 {
 	int referenceArticle;
 	int IDcommande;
 	int quantite;
 
-	PANIER* suivant;
-}PANIER;
+	PANIER^ suivant;
+};

@@ -11,12 +11,12 @@ Personne::~Personne()
 
 }
 
-void Personne::setNom(string nvnom)
+void Personne::setNom(System::String nvnom)
 {
 	Nom = nvnom;
 }
 
-void Personne::setPrenom(string nvprenom)
+void Personne::setPrenom(System::String nvprenom)
 {
 	Prenom = nvprenom;
 }
@@ -28,12 +28,12 @@ void Personne::setDate(int nbannee, int nbmois, int nbjour)
 	date.jour = nbjour;
 }
 
-string Personne::getPrenom()
+System::String Personne::getPrenom()
 {
 	return Prenom;
 }
 
-string Personne::getNom()
+System::String Personne::getNom()
 {
 	return Nom;
 }

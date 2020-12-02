@@ -2,15 +2,15 @@
 #include "Personne.h"
 #include "Structures.h"
 
-class ClassePersonnel : private Personne
+ref class ClassePersonnel : Personne
 {
 private :
 	int IDsuperieur;
-	struct ADRESSE adresse;
+	ref struct ADRESSE adresse;
 public :
 	ClassePersonnel();
 	~ClassePersonnel();
 	int getSuperieur();
-	struct ADRESSE getAdresse();
+	ADRESSE getAdresse();
 };
 

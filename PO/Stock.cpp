@@ -16,12 +16,12 @@ int Stock::getID()
     return IDproduit;
 }
 
-string Stock::getNom()
+System::String Stock::getNom()
 {
     return nomProduit;
 }
 
-void Stock::setNom(string nom)
+void Stock::setNom(System::String nom)
 {
     nomProduit = nom;
 }

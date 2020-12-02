@@ -1,14 +1,13 @@
 #pragma once
-#include "Includes.h"
 
-class Stock
+ref class Stock
 {
 public:
 	Stock(); //ajout d'un nouveau produit au stock
 	~Stock(); //suppression d'un produit du stock
 	int getID();
-	string getNom();
-	void setNom(string);
+	System::String getNom();
+	void setNom(System::String);
 	int getQuantite();
 	void setQuantite(int);
 	int getPrix();
@@ -16,7 +15,7 @@ public:
 
 private:
 	int IDproduit;
-	std::string nomProduit;
+	System::String nomProduit;
 	int quantite;
 	int prixUnitaire;
 };

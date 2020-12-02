@@ -1,11 +1,10 @@
 #include "Statistiques.h"
-#include "includes.h"
 
 void Statistiques::PanierMoyen() {
 
 }
 
-void Statistiques::ChiffreAffaireMois(int Somme, string mois) {
+void Statistiques::ChiffreAffaireMois(int Somme, System::String mois) {
 
 }
 

@@ -1,18 +1,19 @@
 #pragma once
 #include "Structures.h"
 
-class ClasseCommande
+
+ref class ClasseCommande
 {
 private :
 	int	ID; //incrementer par la requete sql
-	struct struct_date dateEmission;
-	struct struct_date dateLivraison;
+	ref struct struct_date dateEmission;
+	ref struct struct_date dateLivraison;
 	float remise; // a calculer via IDclient
 	float totalTTC;
 	int IDclient;
-	struct ADRESSE adresseLivraison;
-	std::string reference;
-	struct PANIER panier;
+	ref struct ADRESSE adresseLivraison;
+	System::String reference;
+	ref struct PANIER panier;
 
 public :
 	ClasseCommande(); //constructeur par defaut, prend les parametres saisis et verifie leur validite

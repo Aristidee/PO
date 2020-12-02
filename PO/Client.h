@@ -2,7 +2,7 @@
 #include "includes.h"
 #include "Structures.h"
 
-class Client : private Personne
+ref class Client : Personne
 {
 public:
 	Client();
@@ -12,7 +12,7 @@ public:
 
 private:
 	int IDClient;
-	struct ADRESSE adresse;
+	ADRESSE adresse;
 	int NombreAchat;
 
 };
