@@ -11,9 +11,9 @@ ref struct ADRESSE
 {
 	int ID;
 	int numero;
-	System::String typeDeVoie;
-	System::String libelleDeVoie;
-	System::String Ville;
+	System::String^ typeDeVoie;
+	System::String^ libelleDeVoie;
+	System::String^ Ville;
 	double codePostal;
 
 	ADRESSE^ suivante;
@@ -22,7 +22,6 @@ ref struct ADRESSE
 ref struct PANIER 
 {
 	int referenceArticle;
-	int IDcommande;
 	int quantite;
 
 	PANIER^ suivant;
