@@ -13,30 +13,26 @@ void ClasseCommande::getID(int^ extID)
 
 void ClasseCommande::setDateEmission(struct_date^ extdateEmission)
 {
-	dateEmission.jour = extdateEmission->jour;
-	dateEmission.mois = extdateEmission->mois;
-	dateEmission.annee = extdateEmission->annee;
+	dateEmission->jour = extdateEmission->jour;
+	dateEmission->mois = extdateEmission->mois;
+	dateEmission->annee = extdateEmission->annee;
 }
 
-void ClasseCommande::getDateEmission(struct_date^ extdateEmission)
+struct_date^ ClasseCommande::getDateEmission()
 {
-	extdateEmission->jour = dateEmission.jour;
-	extdateEmission->mois = dateEmission.mois;
-	extdateEmission->annee = dateEmission.annee;
+	return dateEmission;
 }
 
 void ClasseCommande::setDateLivraison(struct_date^ extdateLivraison)
 {
-	dateLivraison.jour = extdateLivraison->jour;
-	dateLivraison.mois = extdateLivraison->mois;
-	dateLivraison.annee = extdateLivraison->annee;
+	dateLivraison->jour = extdateLivraison->jour;
+	dateLivraison->mois = extdateLivraison->mois;
+	dateLivraison->annee = extdateLivraison->annee;
 }
 
-void ClasseCommande::getDateLivraison(struct_date^ extdateLivraison)
+struct_date^ ClasseCommande::getDateLivraison()
 {
-	extdateLivraison->jour = dateLivraison.jour;
-	extdateLivraison->mois = dateLivraison.mois;
-	extdateLivraison->annee = dateLivraison.annee;
+	return dateLivraison;
 }
 
 void ClasseCommande::setRemise(float^ extremise)
@@ -44,9 +40,9 @@ void ClasseCommande::setRemise(float^ extremise)
 	remise = *extremise;
 }
 
-void ClasseCommande::getRemise(float^ extremise)
+float^ ClasseCommande::getRemise()
 {
-	*extremise = remise;
+	return remise;
 }
 
 void ClasseCommande::setTotal(float^ extTotal)
@@ -54,9 +50,9 @@ void ClasseCommande::setTotal(float^ extTotal)
 	totalTTC = *extTotal;
 }
 
-void ClasseCommande::getTotal(float^ extTotal)
+float^ ClasseCommande::getTotal()
 {
-	*extTotal = totalTTC;
+	return totalTTC;
 }
 
 void ClasseCommande::setIDC(int^ extIDC)
@@ -64,29 +60,24 @@ void ClasseCommande::setIDC(int^ extIDC)
 	IDclient = *extIDC;
 }
 
-void ClasseCommande::getIDC(int^ extIDC)
+int^ ClasseCommande::getIDC()
 {
-	extIDC = IDclient;
+	return IDclient;
 }
 
 void ClasseCommande::setAdresseLivraison(ADRESSE^ extadresseLivraison)
 {
-	adresseLivraison.ID = extadresseLivraison->ID;
-	adresseLivraison.numero = extadresseLivraison->numero;
-	adresseLivraison.typeDeVoie->Copy(extadresseLivraison->typeDeVoie);
-	adresseLivraison.libelleDeVoie->Copy(extadresseLivraison->libelleDeVoie);
-	adresseLivraison.Ville->Copy(extadresseLivraison->Ville);
-	adresseLivraison.codePostal = extadresseLivraison->codePostal;
+	adresseLivraison->ID = extadresseLivraison->ID;
+	adresseLivraison->numero = extadresseLivraison->numero;
+	adresseLivraison->typeDeVoie->Copy(extadresseLivraison->typeDeVoie);
+	adresseLivraison->libelleDeVoie->Copy(extadresseLivraison->libelleDeVoie);
+	adresseLivraison->Ville->Copy(extadresseLivraison->Ville);
+	adresseLivraison->codePostal = extadresseLivraison->codePostal;
 }
 
-void ClasseCommande::getAdresseLivraison(ADRESSE^ extadresseLivraison)
+ADRESSE^ ClasseCommande::getAdresseLivraison()
 {
-	extadresseLivraison->ID = adresseLivraison.ID;
-	extadresseLivraison->numero = adresseLivraison.numero;
-	extadresseLivraison->typeDeVoie->Copy(adresseLivraison.typeDeVoie);
-	extadresseLivraison->libelleDeVoie->Copy(adresseLivraison.libelleDeVoie);
-	extadresseLivraison->Ville->Copy(adresseLivraison.Ville);
-	extadresseLivraison->codePostal = adresseLivraison.codePostal;
+	return adresseLivraison;
 }
 
 void ClasseCommande::setRef(System::String^ extRef)
@@ -94,9 +85,9 @@ void ClasseCommande::setRef(System::String^ extRef)
 	reference->Copy(extRef);
 }
 
-void ClasseCommande::getRef(System::String^ extRef)
+System::String^ ClasseCommande::getRef()
 {
-	extRef->Copy(reference);
+	return reference;
 }
 
 void ClasseCommande::setPanier(PANIER^ extPanier)
@@ -104,20 +95,14 @@ void ClasseCommande::setPanier(PANIER^ extPanier)
 	PANIER^ temp = extPanier->suivant;
 	for (int i = 0; extPanier->suivant != nullptr ; i++)
 	{
-		panier.referenceArticle = extPanier->referenceArticle;
-		panier.quantite = extPanier->quantite;
+		panier->referenceArticle = extPanier->referenceArticle;
+		panier->quantite = extPanier->quantite;
 		temp = extPanier;
 	}
 }
 
-void ClasseCommande::getPanier(PANIER^ extPanier)
+PANIER^ ClasseCommande::getPanier()
 {
-	PANIER^ temp = panier.suivant;
-	for (int i = 0; panier.suivant != nullptr; i++)
-	{
-		 extPanier->referenceArticle = panier.referenceArticle;
-		extPanier->quantite = panier.quantite;
-		temp = panier.suivant;
-	}
+	return panier;
 }
 

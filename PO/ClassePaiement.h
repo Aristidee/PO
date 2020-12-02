@@ -3,27 +3,28 @@
 
 ref class ClassePaiement
 {
-private :
+private:
 	int ID;
 	struct_date dateEnvoi;
 	struct_date dateRecu;
-	System::String moyenPaiement;
+	System::String^ moyenPaiement;
 	float montant;
 	int IDCommande;
 	ADRESSE adresseFacturation;
-public :
+public:
 	ClassePaiement();
 	~ClassePaiement();
-	struct_date getEnvoi();
-	void setEnvoi(int, int, int);
-	struct_date getRecu();
-	void setRecu(int, int, int);
-	std::string getMoyen();
-	void setMoyen(std::string);
-	int getIDCommande();
-	void setIDCommande(int);
-	ADRESSE getAdresse();
-	void setAdresse(int, System::String, System::String, System::String, double);
-
+	void getEnvoi(struct_date^);
+	void setEnvoi(struct_date^);
+	void getRecu(struct_date^);
+	void setRecu(struct_date^);
+	void getMoyen(System::String^);
+	void setMoyen(System::String^);
+	void getMontant(float^);
+	void setMontant(float^);
+	void getIDCommande(int^);
+	void setIDCommande(int^);
+	void getAdresse(ADRESSE^);
+	void setAdresse(ADRESSE^);
 };
 

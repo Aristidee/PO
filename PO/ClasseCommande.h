@@ -6,33 +6,33 @@ ref class ClasseCommande
 {
 private:
 	int	ID; //incrementer par la requete sql
-	struct_date dateEmission;
-	struct_date dateLivraison;
+	struct_date^ dateEmission;
+	struct_date^ dateLivraison;
 	float remise; // a calculer via IDclient
 	float totalTTC;
 	int IDclient;
-	ADRESSE adresseLivraison;
+	ADRESSE^ adresseLivraison;
 	System::String^ reference;
-	PANIER panier;
+	PANIER^ panier;
 
 public:
 	~ClasseCommande(); //destructeur a appeler a chaque fin de service
 	void getID(int^);
 	void setDateEmission(struct_date^);
-	void getDateEmission(struct_date^);
+	struct_date^ getDateEmission();
 	void setDateLivraison(struct_date^);
-	void getDateLivraison(struct_date^);
+	struct_date^ getDateLivraison();
 	void setRemise(float^);
-	void getRemise(float^);
+	float^ getRemise();
 	void setTotal(float^);
-	void getTotal(float^);
+	float^ getTotal();
 	void setIDC(int^);
-	void getIDC(int^);
+	int^ getIDC();
 	void setAdresseLivraison(ADRESSE^);
-	void getAdresseLivraison(ADRESSE^);
+	ADRESSE^ getAdresseLivraison();
 	void setRef(System::String^);
-	void getRef(System::String^);
+	System::String^ getRef();
 	void setPanier(PANIER^);
-	void getPanier(PANIER^);
+	PANIER^ getPanier();
 };
 
