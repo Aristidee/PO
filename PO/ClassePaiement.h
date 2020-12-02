@@ -5,26 +5,26 @@ ref class ClassePaiement
 {
 private:
 	int ID;
-	struct_date dateEnvoi;
-	struct_date dateRecu;
+	struct_date^ dateEnvoi;
+	struct_date^ dateRecu;
 	System::String^ moyenPaiement;
 	float montant;
 	int IDCommande;
-	ADRESSE adresseFacturation;
+	ADRESSE^ adresseFacturation;
 public:
 	ClassePaiement();
 	~ClassePaiement();
-	void getEnvoi(struct_date^);
+	struct_date^ getEnvoi();
 	void setEnvoi(struct_date^);
-	void getRecu(struct_date^);
+	struct_date^ getRecu();
 	void setRecu(struct_date^);
-	void getMoyen(System::String^);
+	System::String^ getMoyen();
 	void setMoyen(System::String^);
-	void getMontant(float^);
+	float^ getMontant();
 	void setMontant(float^);
-	void getIDCommande(int^);
+	int^ getIDCommande();
 	void setIDCommande(int^);
-	void getAdresse(ADRESSE^);
+	ADRESSE^ getAdresse();
 	void setAdresse(ADRESSE^);
 };
 

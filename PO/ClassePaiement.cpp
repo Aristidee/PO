@@ -10,37 +10,33 @@ ClassePaiement::~ClassePaiement()
 
 }
 
-void ClassePaiement::getEnvoi(struct_date^ extdateEnvoi)
+struct_date^ ClassePaiement::getEnvoi()
 {
-	extdateEnvoi->jour = dateEnvoi.jour;
-	extdateEnvoi->mois = dateEnvoi.mois;
-	extdateEnvoi->annee = dateEnvoi.annee;
+	return dateEnvoi;
 }
 
 void ClassePaiement::setEnvoi(struct_date^ extdateEnvoi)
 {
-	dateEnvoi.jour = extdateEnvoi->jour;
-	dateEnvoi.mois = extdateEnvoi->mois;
-	dateEnvoi.annee = extdateEnvoi->annee;
+	dateEnvoi->jour = extdateEnvoi->jour;
+	dateEnvoi->mois = extdateEnvoi->mois;
+	dateEnvoi->annee = extdateEnvoi->annee;
 }
 
-void ClassePaiement::getRecu(struct_date^ extdateRecu)
+struct_date^ ClassePaiement::getRecu()
 {
-	extdateRecu->jour = dateRecu.jour;
-	extdateRecu->mois = dateRecu.mois;
-	extdateRecu->annee = dateRecu.annee;
+	return dateRecu;
 }
 
 void ClassePaiement::setRecu(struct_date^ extdateRecu)
 {
-	dateRecu.jour = extdateRecu->jour;
-	dateRecu.mois = extdateRecu->mois;
-	dateRecu.annee = extdateRecu->annee;
+	dateRecu->jour = extdateRecu->jour;
+	dateRecu->mois = extdateRecu->mois;
+	dateRecu->annee = extdateRecu->annee;
 }
 
-void ClassePaiement::getMoyen(System::String^ extmoyenPaiement)
+System::String^ ClassePaiement::getMoyen()
 {
-	extmoyenPaiement->Copy(moyenPaiement);
+	return moyenPaiement;
 }
 
 void ClassePaiement::setMoyen(System::String^ extmoyenPaiement)
@@ -48,9 +44,9 @@ void ClassePaiement::setMoyen(System::String^ extmoyenPaiement)
 	moyenPaiement->Copy(extmoyenPaiement);
 }
 
-void ClassePaiement::getMontant(float^ extmontant)
+float^ ClassePaiement::getMontant()
 {
-	*extmontant = montant;
+	return montant;
 }
 
 void ClassePaiement::setMontant(float^ extmontant)
@@ -58,9 +54,9 @@ void ClassePaiement::setMontant(float^ extmontant)
 	montant = *extmontant;
 }
 
-void ClassePaiement::getIDCommande(int^ extIDCommande)
+int^ ClassePaiement::getIDCommande()
 {
-	*extIDCommande = IDCommande;
+	return IDCommande;
 }
 
 void ClassePaiement::setIDCommande(int^ extIDCommande)
@@ -68,20 +64,16 @@ void ClassePaiement::setIDCommande(int^ extIDCommande)
 	IDCommande = *extIDCommande;
 }
 
-void ClassePaiement::getAdresse(ADRESSE^ extadresseFacturation)
+ADRESSE^ ClassePaiement::getAdresse()
 {
-	extadresseFacturation->numero = adresseFacturation.numero;
-	extadresseFacturation->typeDeVoie->Copy(adresseFacturation.typeDeVoie);
-	extadresseFacturation->libelleDeVoie->Copy(adresseFacturation.libelleDeVoie);
-	extadresseFacturation->Ville->Copy(adresseFacturation.Ville);
-	extadresseFacturation->codePostal = adresseFacturation.codePostal;
+	return adresseFacturation;
 }
 
 void ClassePaiement::setAdresse(ADRESSE^ extadresseFacturation)
 {
-	adresseFacturation.numero = extadresseFacturation->numero;
-	adresseFacturation.typeDeVoie->Copy(extadresseFacturation->typeDeVoie);
-	adresseFacturation.libelleDeVoie->Copy(extadresseFacturation->libelleDeVoie);
-	adresseFacturation.Ville->Copy(extadresseFacturation->Ville);
-	adresseFacturation.codePostal = extadresseFacturation->codePostal;
+	adresseFacturation->numero = extadresseFacturation->numero;
+	adresseFacturation->typeDeVoie->Copy(extadresseFacturation->typeDeVoie);
+	adresseFacturation->libelleDeVoie->Copy(extadresseFacturation->libelleDeVoie);
+	adresseFacturation->Ville->Copy(extadresseFacturation->Ville);
+	adresseFacturation->codePostal = extadresseFacturation->codePostal;
 }
