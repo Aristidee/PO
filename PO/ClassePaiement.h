@@ -5,12 +5,12 @@ ref class ClassePaiement
 {
 private :
 	int ID;
-	ref struct struct_date dateEnvoi;
-	ref struct struct_date dateRecu;
+	struct_date dateEnvoi;
+	struct_date dateRecu;
 	System::String moyenPaiement;
 	float montant;
 	int IDCommande;
-	ref struct ADRESSE adresseFacturation;
+	ADRESSE adresseFacturation;
 public :
 	ClassePaiement();
 	~ClassePaiement();
@@ -23,7 +23,7 @@ public :
 	int getIDCommande();
 	void setIDCommande(int);
 	ADRESSE getAdresse();
-	void setAdresse(int, std::string, std::string, std::string, double);
+	void setAdresse(int, System::String, System::String, System::String, double);
 
 };
 

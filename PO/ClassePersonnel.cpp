@@ -13,7 +13,7 @@ int ClassePersonnel::getSuperieur()
 	return IDsuperieur;
 }
 
-struct ADRESSE ClassePersonnel::getAdresse()
+ref struct ADRESSE ClassePersonnel::getAdresse()
 {
 	return adresse;
 }
