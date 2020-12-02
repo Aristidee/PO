@@ -1,5 +1,4 @@
 #include "Stock.h"
-#include "Includes.h"
 
 Stock::Stock()
 {

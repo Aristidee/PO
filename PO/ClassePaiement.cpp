@@ -2,6 +2,7 @@
 
 ClassePaiement::ClassePaiement()
 {
+
 }
 
 ClassePaiement::~ClassePaiement()
@@ -32,12 +33,12 @@ void ClassePaiement::setRecu(int j, int m, int a)
 	dateRecu.jour = a;
 }
 
-std::string ClassePaiement::getMoyen()
+System::String ClassePaiement::getMoyen()
 {
 	return moyenPaiement;
 }
 
-void ClassePaiement::setMoyen(std::string moyen)
+void ClassePaiement::setMoyen(System::String moyen)
 {
 	moyenPaiement = moyen;
 }
@@ -52,12 +53,12 @@ void ClassePaiement::setIDCommande(int IDc)
 	IDCommande = IDc;
 }
 
-struct ADRESSE ClassePaiement::getAdresse()
+ADRESSE ClassePaiement::getAdresse()
 {
 	return adresseFacturation;
 }
 
-void ClassePaiement::setAdresse(int num, std::string type, std::string libelle, std::string vil, double code)
+void ClassePaiement::setAdresse(int num, System::String type, System::String libelle, System::String vil, double code)
 {
 	adresseFacturation.numero = num;
 	adresseFacturation.typeDeVoie = type;
