@@ -6,11 +6,13 @@ ref class ClassePersonnel : Personne
 {
 private :
 	int IDsuperieur;
-	ref struct ADRESSE adresse;
+	ADRESSE^ adresse;
 public :
 	ClassePersonnel();
 	~ClassePersonnel();
 	int getSuperieur();
-	ADRESSE getAdresse();
+	void setSuperieur(int^);
+	ADRESSE^ getAdresse();
+	void setAdresse(ADRESSE^);
 };
 
