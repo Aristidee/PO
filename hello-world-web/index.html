@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Projet Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">🌍 Hello World!</h1>
+                <p class="subtitle">Bienvenue dans votre premier projet web</p>
+            </div>
+            
+            <div class="content">
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Rapide</h3>
+                        <p>Chargement ultra-rapide</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Moderne</h3>
+                        <p>Design contemporain</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Adapté à tous les écrans</p>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <button class="btn-primary" onclick="showMessage()">Cliquez ici!</button>
+                    <div id="message" class="message hidden"></div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Projet créé avec ❤️</p>
+                <p class="timestamp" id="timestamp"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Afficher l'heure actuelle
+        function updateTimestamp() {
+            const now = new Date();
+            const timestamp = now.toLocaleString('fr-FR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            document.getElementById('timestamp').textContent = `Dernière mise à jour: ${timestamp}`;
+        }
+
+        // Fonction pour afficher un message
+        function showMessage() {
+            const message = document.getElementById('message');
+            const messages = [
+                "🎉 Félicitations! Votre site web fonctionne!",
+                "✨ Vous avez créé votre premier projet web!",
+                "🚀 Votre aventure web commence ici!",
+                "💫 Bienvenue dans le monde du développement web!"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            message.textContent = randomMessage;
+            message.classList.remove('hidden');
+            
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Initialiser la page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTimestamp();
+            setInterval(updateTimestamp, 60000); // Mise à jour chaque minute
+        });
+    </script>
+</body>
+</html>
